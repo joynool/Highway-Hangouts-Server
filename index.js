@@ -62,14 +62,17 @@ async function run() {
 
         const usersCollection = database.collection('users');
         const chefsCollection = database.collection('chefs');
-        const menuCollection = database.collection('menu');
+        const breakfastCollection = database.collection('allbreakfast');
+        const allLunchCollection = database.collection('AllLunch');
+        const allDinnerCollection = database.collection('allDinner');
+        const bookingCollection = database.collection("booking");
         const recipesCollection = database.collection("recipes");
+        // const bookingMenuCollection = database.collection("menuAll");
         const reviewCollection = database.collection("review");
         const bookingCollection = database.collection("booking");
         const breakfastCollection = database.collection('breakfast');
         const lunchCollection = database.collection('lunch');
         const dinnerCollection = database.collection('dinner');
-
 
 
         app.get('/users/:email', async (req, res) => {
@@ -114,7 +117,6 @@ async function run() {
             else {
                 res.status(403).json({ message: 'you do not have access to make admin' })
             }
-
         });
 
 
